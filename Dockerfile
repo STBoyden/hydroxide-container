@@ -33,5 +33,8 @@ ENV HYDROXIDE_TLS_CLIENT_CA=""
 
 ENV HYDROXIDE_DEBUG="false"
 
+USER root
 RUN ["chmod", "+x", "/app/entrypoint"]
+
+USER hydroxide
 ENTRYPOINT ["/app/entrypoint"]
